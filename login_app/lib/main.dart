@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/src/utils/theme/theme.dart';
+import 'package:login_app/src/features/authentication/screens/splash_screen/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const App());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
+      theme: TAppTheme.lightTheme,
+      darkTheme: TAppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      home: SplashScreen(),
     );
   }
 }
-

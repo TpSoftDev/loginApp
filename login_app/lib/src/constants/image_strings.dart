@@ -1,4 +1,3 @@
-
 /* -- App Image Strings -- */
 
 
